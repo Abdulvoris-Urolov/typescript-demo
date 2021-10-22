@@ -14,28 +14,19 @@
 
 
 // inteface
-interface IShape{
-    x: number;
-    y: number;
-    draw(): void; 
-}
+// interface IShape{
+//     x: number;
+//     y: number;
+//     draw(): void; 
+// }
 
 
 // class
-class Shape implements IShape {
-    x: number;
-    y: number;
-    
-    draw() {
-        //..
-        console.log(this.x.toString());
-        console.log(this.y.toString());
-    }
-}
 
 
+import { Shape } from "./shape";
 // object
-let shape = new Shape();
-shape.x = 10;
-shape.y = 20;
+let shape = new Shape(10, 20);
+let xValue = shape.x;
+shape.x = -1;
 shape.draw();
